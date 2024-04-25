@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mobileView {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+
+.mobileView .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .mobileView .carousel {
+        grid-auto-columns: 100%;
+    }
+    .mobileView{
+        display: block;
+    }
+    .deskView{
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .mobileView{
+        display: none;
+    }
+    .deskView{
+        display: block;
+    }
+}
+.box-content {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .box-content{
+    max-width: 350px;
+width: 350px;
+height: 580px; 
+border-radius: 30px;
+background-image: linear-gradient(to top, rgb(12, 12, 12), rgb(102, 102, 102));
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;    
+}
+
+.Box{
+position: relative;
+border-radius: 30px;
+display: flex; /* For centering content */
+    justify-content: center;
+    align-items: center;
+}
+

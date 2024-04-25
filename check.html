@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+<form id="submit-form" action="">
+<input type="text" id="fname" name="name" placeholder="Your name..">
+<input type="text" id="lname" name="email" placeholder="Your email">
+<textarea id="subject" name="message" placeholder="Write something.."></textarea>
+<input type="submit" value="Submit">
+</form>
+
+</div>
+
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwW4MXsRvIqU1K5Ws4vxcpEfPMRAI9Qy1o3kVQiImxj8VVY2K2nfYI29blK9OZy2dg/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>

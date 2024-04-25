@@ -1,0 +1,975 @@
+
+@media (min-width:600px){
+    .box1 {
+      --white: hsl(0, 0%, 100%);
+      --black: hsl(240, 15%, 9%);
+      --paragraph: hsl(0, 0%, 83%);
+      --line: hsl(240, 9%, 17%);
+      --primary: hsl(0, 0%, 100%);
+    
+      position: relative;
+    
+      display: flex;
+      flex-direction: column;
+      gap: rem;
+    
+      padding: 1rem;
+      width: 17rem;
+      height: 25rem;
+      background-color: hsla(240, 15%, 9%, 1);
+      background-image: radial-gradient(
+          at 88% 40%,
+          hsla(240, 15%, 9%, 1) 0px,
+          transparent 85%
+        ),
+        radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+        radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+        radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+        radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+        radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+    
+      border-radius: 1rem;
+      box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+    }
+    
+    .box1 .card__border {
+      overflow: hidden;
+      pointer-events: none;
+    
+      position: absolute;
+      z-index: -10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      background-image: linear-gradient(
+        0deg,
+        hsl(0, 0%, 100%) -50%,
+        hsl(0, 0%, 40%) 100%
+      );
+    
+      border-radius: 1rem;
+    }
+    
+    .box1 .card__border::before {
+      content: "";
+      pointer-events: none;
+    
+      position: fixed;
+      z-index: 200;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%), rotate(0deg);
+      transform-origin: left;
+    
+      width: 200%;
+      height: 10rem;
+      background-image: linear-gradient(
+        0deg,
+        hsla(0, 0%, 100%, 0) 0%,
+        hsl(0, 0%, 100%) 40%,
+        hsl(0, 0%, 100%) 60%,
+        hsla(0, 0%, 40%, 0) 100%
+      );
+    
+      animation: rotate 8s linear infinite;
+    }
+    
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .box1 .card_title__container .card_title {
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    
+    .box1 .card_title__container .card_paragraph {
+      margin-top: rem;
+      width: 65%;
+    
+      font-size: .75rem;
+      color: var(--paragraph);
+    }
+    
+    .box1 .line {
+      width: 100%;
+      height: 0.1rem;
+      background-color: var(--line);
+    
+      border: none;
+    }
+    
+    .box1 .card__list {
+      align-self: right;
+      display: flex;
+      font-size: larger;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    ul{
+      padding-inline-start: 12px;
+    }
+    
+    .box1 .card__list .card__list_item {
+      display: flex;
+      gap: 1rem;
+      font-size: larger;
+    }
+    
+    .box1 .card__list .card__list_item .check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--primary);
+    
+      border-radius: 50%;
+    }
+    
+    .box1 .card__list .card__list_item .check .check_svg {
+      width: 0.75rem;
+      height: 0.75rem;
+    
+      fill: var(--black);
+    }
+    
+    .box1 .card__list .card__list_item .list_text {
+      font-size: 1rem;
+      color: var(--white);
+    }
+    
+    .box1 .button {
+      cursor: pointer;
+      height: 4em;
+      margin: 0em 0em 0em 0em;
+      padding: 0.5rem;
+      width: 100%;
+      background-image: linear-gradient(
+        0deg,
+        rgb(93, 84, 84) 0%,
+        rgb(109, 105, 105) 100%
+      );
+    
+      font-size: 0.75rem;
+      color: var(--white);
+    
+      border: 0;
+      border-radius: 9px;
+      box-shadow: inset 0 -2px 25px -4px var(--white);
+    }
+      /* Box 2 */
+      .box2 {
+        --white: hsl(0, 0%, 100%);
+        --black: hsl(240, 15%, 9%);
+        --paragraph: hsl(0, 0%, 83%);
+        --line: hsl(240, 9%, 17%);
+        --primary: hsl(0, 0%, 100%);
+        
+        position: relative;
+        
+        display: flex;
+        flex-direction: column;
+        
+        padding: 1rem;
+        width: 20rem; /* Adjusted width */
+        height: 30rem; /* Adjusted height */
+        background-color: hsla(240, 15%, 9%, 1);
+        background-image: radial-gradient(
+            at 88% 40%,
+            hsla(240, 15%, 9%, 1) 0px,
+            transparent 85%
+          ),
+          radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+          radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+          radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+          radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+          radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+        
+        border-radius: 1rem;
+        box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+      }
+      
+      .box2 .card__border {
+        overflow: hidden;
+        pointer-events: none;
+        
+        position: absolute;
+        z-index: -10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-image: linear-gradient(
+          0deg,
+          hsl(0, 0%, 100%) -50%,
+          hsl(0, 0%, 40%) 100%
+        );
+        
+        border-radius: 1rem;
+      }
+      
+      .box2 .card__border::before {
+        content: "";
+        pointer-events: none;
+        
+        position: fixed;
+        z-index: 200;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%), rotate(0deg);
+        transform-origin: left;
+        
+        width: 200%;
+        height: 10rem;
+        background-image: linear-gradient(
+          0deg,
+          hsla(0, 0%, 100%, 0) 0%,
+          hsl(0, 0%, 100%) 40%,
+          hsl(0, 0%, 100%) 60%,
+          hsla(0, 0%, 40%, 0) 100%
+        );
+        
+        animation: rotate 8s linear infinite;
+      }
+      
+      .box2 .card_title__container .card_title {
+        font-size: 1.5rem;
+        color: var(--white);
+      }
+      
+      .box2 .card_title__container .card_paragraph {
+        margin-top: rem;
+        width: 65%;
+        
+        font-size: .75rem;
+        color: var(--paragraph);
+      }
+      
+      .box2 .line {
+        width: 100%;
+        height: 0.1rem;
+        background-color: var(--line);
+        
+        border: none;
+      }
+      
+      .box2 .card__list {
+        align-self: right;
+        display: flex;
+        font-size: larger;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      ul{
+        padding-inline-start: 12px;
+      }
+      
+      .box2 .card__list .card__list_item {
+        display: flex;
+        gap: 1rem;
+        font-size: larger;
+      }
+      
+      .box2 .card__list .card__list_item .check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--primary);
+        
+        border-radius: 50%;
+      }
+      
+      .box2 .card__list .card__list_item .check .check_svg {
+        width: 0.75rem;
+        height: 0.75rem;
+        
+        fill: var(--black);
+      }
+      
+      .box2 .card__list .card__list_item .list_text {
+        font-size: 1rem;
+        color: var(--white);
+      }
+      
+      .box2 .button {
+        cursor: pointer;
+        height: 4em;
+        margin: 6.5em 0em 0em 0em;
+        padding: 0.5rem;
+        width: 100%;
+        background-image: linear-gradient(
+          0deg,
+          rgb(93, 84, 84) 0%,
+          rgb(109, 105, 105) 100%
+        );
+        
+        font-size: 0.75rem;
+        color: var(--white);
+        
+        border: 0;
+        border-radius: 9px;
+        box-shadow: inset 0 -2px 25px -4px var(--white);
+      }
+    .boxes{
+      height: 33rem;
+    }
+  /* Box 3 */
+  .box3 {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(240, 15%, 9%);
+    --paragraph: hsl(0, 0%, 83%);
+    --line: hsl(240, 9%, 17%);
+    --primary: hsl(0, 0%, 100%);
+    
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    padding: 1rem;
+    width: 17rem;
+    height: 25rem;
+    background-color: hsla(240, 15%, 9%, 1);
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+    
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+  
+  .box3 .card__border {
+    overflow: hidden;
+    pointer-events: none;
+    
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) -50%,
+      hsl(0, 0%, 40%) 100%
+    );
+    
+    border-radius: 1rem;
+  }
+  
+  .box3 .card__border::before {
+    content: "";
+    pointer-events: none;
+    
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%), rotate(0deg);
+    transform-origin: left;
+    
+    width: 200%;
+    height: 10rem;
+    background-image: linear-gradient(
+      0deg,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsl(0, 0%, 100%) 40%,
+      hsl(0, 0%, 100%) 60%,
+      hsla(0, 0%, 40%, 0) 100%
+    );
+    
+    animation: rotate 8s linear infinite;
+  }
+  
+  .box3 .card_title__container .card_title {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  
+  .box3 .card_title__container .card_paragraph {
+    margin-top: rem;
+    width: 65%;
+    
+    font-size: .75rem;
+    color: var(--paragraph);
+  }
+  
+  .box3 .line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--line);
+    
+    border: none;
+  }
+  
+  .box3 .card__list {
+    align-self: right;
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  ul {
+    padding-inline-start: 12px;
+  }
+  
+  .box3 .card__list .card__list_item {
+    display: flex;
+    gap: 1rem;
+    font-size: larger;
+  }
+  
+  .box3 .card__list .card__list_item .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    
+    border-radius: 50%;
+  }
+  
+  .box3 .card__list .card__list_item .check .check_svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    
+    fill: var(--black);
+  }
+  
+  .box3 .card__list .card__list_item .list_text {
+    font-size: 1rem;
+    color: var(--white);
+  }
+  
+  .box3 .button {
+    cursor: pointer;
+    height: 4em;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5rem;
+    width: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgb(93, 84, 84) 0%,
+      rgb(109, 105, 105) 100%
+    );
+    
+    font-size: 0.75rem;
+    color: var(--white);
+    
+    border: 0;
+    border-radius: 9px;
+    box-shadow: inset 0 -2px 25px -4px var(--white);
+  }
+  
+    
+  }
+  @media (max-width:768px){
+    .box1 {
+      --white: hsl(0, 0%, 100%);
+      --black: hsl(240, 15%, 9%);
+      --paragraph: hsl(0, 0%, 83%);
+      --line: hsl(240, 9%, 17%);
+      --primary: hsl(0, 0%, 100%);
+    
+      position: relative;
+    
+      display: flex;
+      flex-direction: column;
+    
+      padding: 1rem;
+      width: 18rem;
+      height: 26rem;
+      background-color: hsla(240, 15%, 9%, 1);
+      background-image: radial-gradient(
+          at 88% 40%,
+          hsla(240, 15%, 9%, 1) 0px,
+          transparent 85%
+        ),
+        radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+        radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+        radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+        radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+        radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+    
+      border-radius: 1rem;
+      box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+    }
+    
+    .box1 .card__border {
+      overflow: hidden;
+      pointer-events: none;
+    
+      position: absolute;
+      z-index: -10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      background-image: linear-gradient(
+        0deg,
+        hsl(0, 0%, 100%) -50%,
+        hsl(0, 0%, 40%) 100%
+      );
+    
+      border-radius: 1rem;
+    }
+    
+    .box1 .card__border::before {
+      content: "";
+      pointer-events: none;
+    
+      position: fixed;
+      z-index: 200;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%), rotate(0deg);
+      transform-origin: left;
+    
+      width: 200%;
+      height: 10rem;
+      background-image: linear-gradient(
+        0deg,
+        hsla(0, 0%, 100%, 0) 0%,
+        hsl(0, 0%, 100%) 40%,
+        hsl(0, 0%, 100%) 60%,
+        hsla(0, 0%, 40%, 0) 100%
+      );
+    
+      animation: rotate 8s linear infinite;
+    }
+    
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .box1 .card_title__container .card_title {
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    
+    .box1 .card_title__container .card_paragraph {
+      margin-top: rem;
+      width: 65%;
+    
+      font-size: .75rem;
+      color: var(--paragraph);
+    }
+    
+    .box1 .line {
+      width: 100%;
+      height: 0.1rem;
+      background-color: var(--line);
+    
+      border: none;
+    }
+    
+    .box1 .card__list {
+      align-self: right;
+      display: flex;
+      font-size: larger;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    ul{
+      padding-inline-start: 12px;
+    }
+    
+    .box1 .card__list .card__list_item {
+      display: flex;
+      gap: 1rem;
+      font-size: larger;
+    }
+    
+    .box1 .card__list .card__list_item .check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--primary);
+    
+      border-radius: 50%;
+    }
+    
+    .box1 .card__list .card__list_item .check .check_svg {
+      width: 0.75rem;
+      height: 0.75rem;
+    
+      fill: var(--black);
+    }
+    
+    .box1 .card__list .card__list_item .list_text {
+      font-size: 1rem;
+      color: var(--white);
+    }
+    
+    .box1 .button {
+      cursor: pointer;
+      height: 4em;
+      margin: 0em 0em 0em 0em;
+      padding: 0.5rem;
+      width: 100%;
+      background-image: linear-gradient(
+        0deg,
+        rgb(93, 84, 84) 0%,
+        rgb(109, 105, 105) 100%
+      );
+    
+      font-size: 0.75rem;
+      color: var(--white);
+    
+      border: 0;
+      border-radius: 9px;
+      box-shadow: inset 0 -2px 25px -4px var(--white);
+    }
+    /* Box 2 */
+  .box2 {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(240, 15%, 9%);
+    --paragraph: hsl(0, 0%, 83%);
+    --line: hsl(240, 9%, 17%);
+    --primary: hsl(0, 0%, 100%);
+    
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1rem;
+    width: 18rem;
+    height: 26rem;
+    background-color: hsla(240, 15%, 9%, 1);
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+    
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+    
+  }
+  
+  .box2 .card__border {
+    overflow: hidden;
+    pointer-events: none;
+    
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) -50%,
+      hsl(0, 0%, 40%) 100%
+    );
+    
+    border-radius: 1rem;
+  }
+  
+  .box2 .card__border::before {
+    content: "";
+    pointer-events: none;
+    
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%), rotate(0deg);
+    transform-origin: left;
+    
+    width: 200%;
+    height: 10rem;
+    background-image: linear-gradient(
+      0deg,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsl(0, 0%, 100%) 40%,
+      hsl(0, 0%, 100%) 60%,
+      hsla(0, 0%, 40%, 0) 100%
+    );
+    
+    animation: rotate 8s linear infinite;
+  }
+  
+  .box2 .card_title__container .card_title {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  
+  .box2 .card_title__container .card_paragraph {
+    margin-top: rem;
+    width: 65%;
+    
+    font-size: .75rem;
+    color: var(--paragraph);
+  }
+  
+  .box2 .line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--line);
+    
+    border: none;
+  }
+  
+  .box2 .card__list {
+    align-self: right;
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  ul {
+    padding-inline-start: 12px;
+  }
+  
+  .box2 .card__list .card__list_item {
+    display: flex;
+    gap: 1rem;
+    font-size: larger;
+  }
+  
+  .box2 .card__list .card__list_item .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    
+    border-radius: 50%;
+  }
+  
+  .box2 .card__list .card__list_item .check .check_svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    
+    fill: var(--black);
+  }
+  
+  .box2 .card__list .card__list_item .list_text {
+    font-size: 1rem;
+    color: var(--white);
+  }
+  
+  .box2 .button {
+    cursor: pointer;
+    height: 4em;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5rem;
+    width: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgb(93, 84, 84) 0%,
+      rgb(109, 105, 105) 100%
+    );
+    
+    font-size: 0.75rem;
+    color: var(--white);
+    
+    border: 0;
+    border-radius: 9px;
+    box-shadow: inset 0 -2px 25px -4px var(--white);
+  }
+  
+  /* Box 3 */
+  .box3 {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(240, 15%, 9%);
+    --paragraph: hsl(0, 0%, 83%);
+    --line: hsl(240, 9%, 17%);
+    --primary: hsl(0, 0%, 100%);
+    
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    padding: 1rem;
+    width: 18rem;
+    height: 26rem;
+    background-color: hsla(240, 15%, 9%, 1);
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, rgb(212, 209, 216) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, rgb(29, 29, 29) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, rgb(43, 43, 43) 0px, transparent 85%);
+    
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+    
+  }
+  
+  .box3 .card__border {
+    overflow: hidden;
+    pointer-events: none;
+    
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) -50%,
+      hsl(0, 0%, 40%) 100%
+    );
+    
+    border-radius: 1rem;
+  }
+  
+  .box3 .card__border::before {
+    content: "";
+    pointer-events: none;
+    
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%), rotate(0deg);
+    transform-origin: left;
+    
+    width: 200%;
+    height: 10rem;
+    background-image: linear-gradient(
+      0deg,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsl(0, 0%, 100%) 40%,
+      hsl(0, 0%, 100%) 60%,
+      hsla(0, 0%, 40%, 0) 100%
+    );
+    
+    animation: rotate 8s linear infinite;
+  }
+  
+  .box3 .card_title__container .card_title {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  
+  .box3 .card_title__container .card_paragraph {
+    margin-top: rem;
+    width: 65%;
+    
+    font-size: .75rem;
+    color: var(--paragraph);
+  }
+  
+  .box3 .line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--line);
+    
+    border: none;
+  }
+  
+  .box3 .card__list {
+    align-self: right;
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  ul {
+    padding-inline-start: 12px;
+  }
+  
+  .box3 .card__list .card__list_item {
+    display: flex;
+    gap: 1rem;
+    font-size: larger;
+  }
+  
+  .box3 .card__list .card__list_item .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--primary);
+    
+    border-radius: 50%;
+  }
+  
+  .box3 .card__list .card__list_item .check .check_svg {
+    width: 0.75rem;
+    height: 0.75rem;
+    
+    fill: var(--black);
+  }
+  
+  .box3 .card__list .card__list_item .list_text {
+    font-size: 1rem;
+    color: var(--white);
+  }
+  
+  .box3 .button {
+    cursor: pointer;
+    height: 4em;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5rem;
+    width: 100%;
+    background-image: linear-gradient(
+      0deg,
+      rgb(93, 84, 84) 0%,
+      rgb(109, 105, 105) 100%
+    );
+    
+    font-size: 0.75rem;
+    color: var(--white);
+    
+    border: 0;
+    border-radius: 9px;
+    box-shadow: inset 0 -2px 25px -4px var(--white);
+  }
+  
+  }

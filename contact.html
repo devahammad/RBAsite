@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - RBA Softwares</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+                                         <!-- Loading Page code:  -->
+
+
+    <div class="loading-page">
+        <div class="logo-container">
+            <img src="SVG/RBA Logo.svg" class="logoLOAD"  style=" height: 4em;" alt="Logo">
+        </div>   
+
+    </div>
+
+                                                    <!-- Header Starts From here   -->
+
+ <section class="main2">
+
+    <header class="HeadMobi firstHeader" >
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; ">
+          <a href="index.html"style="margin-left: auto; margin-right: auto; cursor: pointer;"><img class="logo"   src="SVG/RBA Logo.svg" ></a> 
+          <span class="openbtn" style="font-size: 1em; cursor: pointer; color: #818589; right: 0;  position: absolute; padding-right: 10px;" onclick="openNav()">Menu</span>
+        </div>
+      </header>
+      
+    
+      <header class="NavItDesk secondHeader">
+        <hr style="border: 1px solid rgb(200, 200, 200); width: 80%; box-shadow: 0 0px 8px rgb(255, 255, 255); border-radius: 20px">
+       <div class="navI" style="display: flex; gap: 8em; justify-content: center; align-items: center; padding-left: 15px; padding-bottom: 10px; padding-top: 5px;" >
+        <a href="index.html" >Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html"style="color: white;">Contact</a>
+        <a href="rbaplus.html">RBA+</a>
+       </div>
+    
+      </header>    
+        
+        <div id="myNav" class="overlay">
+      <a href="javascript:void(0)"  class="closebtn" onclick="closeNav()" style="font-size: 1em; right: 0; padding-right: 10px; color: #ffffff;">Close</a>
+      <div class="overlay-content">
+        <a href="index.html" Class="spNav" >Home</a>
+        <a href="about.html" Class="spNav">About</a>
+        <a href="pricing.html" Class="spNav">Pricing</a>
+        <a href="contact.html" Class="spNav"style="color: white;">Contact</a>
+        <a href="rbaplus.html" Class="spNav">RBA+</a>
+      </div>
+    </div>
+
+                                                    <!--  From here Main Content Starts  -->  
+   <div class="CpHead" style="
+          background-color: rgb(0, 0, 0);
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <h1 class="supportHead" style="text-shadow: 0 0 20px rgb(177, 177, 177);">Let's Merge Our Ideas!</h1>
+        <p class="supportPara lapPara" style="font-weight: 100; ">
+          Let's create something incredible! Share your vision, and let's make
+          it happen together! <br />
+          Drop us a few details, and we'll be in touch soon
+        </p>
+
+        <p class="supportPara mobPara">
+          Let's create something incredible! Share your vision, and<br />
+          let's make it happen together! Drop us a few details,<br />
+          and we'll be in touch soon
+        </p>
+        <br />
+        <div class="parentSupport">
+<div class="thanku" style="color: white; display: none;">
+  <h1 class="supportHead" >We Got It!
+
+<figcaption class="outlinetext" style="padding-top: 1em;">
+  Thanks for dropping us a line! Our crew will hit you up real soon. Stay tuned to your inbox!
+</figcaption>
+
+  </h1>
+  <img src="SVG/undraw_message_sent_re_q2kl.svg" class="vector">
+</div>
+            <div class="formDiv" style="display: flex;">
+              <form
+                class="supportForm"
+                id="submit-form"
+                action=""
+                style="
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  display: flex;"
+              >
+                <input
+                  type="text"
+                  class="formFill"
+                  id="fname"
+                  name="Name"
+                  required
+                  placeholder="Name"
+                />
+                <input
+                  type="email"
+                  class="formFill"
+                  id="lname"
+                  name="Email"
+                  required
+                  placeholder="Email Address"
+                />
+                <textarea
+                  id="subject"
+                  name="Message"
+                  rows="4"
+                  required
+                  placeholder="What are you looking for?"
+                ></textarea>
+                <label
+                  class="cBox"
+                  style="font-family: PoppinsExtraLight; font-size: 16px; color: white;" 
+                  >Receive offers and updates.
+                  <input
+                    type="checkbox"
+                    id="promoCheckbox"
+                    onclick="updateCheckbox()"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <input
+                  type="hidden"
+                  id="promoInput"
+                  name="Promotion"
+                  value="No"
+                />
+                <input type="hidden" name="Enquiry Type" value="2A" />
+                <button type="submit" value="Submit" class="submitBtn">
+                  Let's Talk
+                </button>
+              </form>
+
+            </div>
+
+
+            <div class="contactDiv">
+
+              <h1 class="contactHead" style="text-shadow: 0 0 5px rgb(190, 190, 190); color: rgb(65, 65, 65);">Contact Us</h1>
+
+              <div class="emailDiv" style="font-size: 15px;">
+               Email
+               </div>
+             
+               <div class="emailDiv C47" style="border: none;">
+                <a 
+                href="mailto:support@rbasoftwares.com" 
+                style="
+                text-decoration: none;
+                color: rgb(125, 125, 125);
+               padding-left: 4px;
+               font-size: 13px;
+                "
+                >support@rbasoftwares.com</a>
+               </div>
+
+             
+
+               <div class="phoneDiv" style="font-size: 15px; margin-top: 2em;">
+                Phone
+                </div>
+              
+                <div class="phoneDiv" style="border: none;">
+                 <a 
+                 href="tel:+971544397659" 
+                 style="
+                 text-decoration: none;
+                 color: rgb(125, 125, 125);
+                   padding-left: 4px;
+                   font-size: 13px;
+                 "
+                 >+971544397659</a>
+                </div>
+
+            
+
+                <div class="SMicons" style=" padding-bottom: 1em; padding-top: 2em;">
+                  <button onclick="location.href='https://instagram.com/rbasoftwares'" class="sm"><img class="sm1"  src="SVG/5279112_camera_instagram_social media_instagram logo_icon.svg" style="width: 3.5em;"></button>
+                  <button class="sm"><img class="sm1"  src="SVG/5279121_call_chat_messenger_whatsapp_whatsapp logo_icon.svg" style="width: 3.5em;"></button>
+                  <button class="sm"><img class="sm1"  src="SVG/5279114_linkedin_network_social network_linkedin logo_icon.svg" style="width: 3.5em;"></button>
+                  <button class="sm"><img class="sm1"  src="SVG/5279120_play_video_youtube_youtuble logo_icon.svg" style="width: 3.5em;"></button>
+                   </div>
+                   <p style="font-size: 12px; color: rgb(72, 72, 72);">Terms | Privacy</p>
+                                      <p style="font-size: 10px; color: rgb(72, 72, 72); padding-bottom: 0.5em;">© 2024 RBA Softwares. All rights reserved.</p>
+
+               </div>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+                                                            <!-- Content Ends Here -->
+
+    <script src="script.js"> </script>
+    <script src="second.js"></script>
+</body>
+</html>
