@@ -13,16 +13,7 @@ function setLiteOpacity() {
 
     // Move the target behind Lite
     const liteBtn = document.querySelector(".mynav button:nth-child(1)");
-    const width = liteBtn.getBoundingClientRect().width;
-    const height = liteBtn.getBoundingClientRect().height;
-    const left = liteBtn.getBoundingClientRect().left + window.scrollX;
-    const top = liteBtn.getBoundingClientRect().top + window.scrollY;
-    const target = document.querySelector(".target");
-    target.style.width = `${width}px`;
-    target.style.height = `${height}px`;
-    target.style. left = `${left}px`;
-    target.style.top = `${top}px`;
-    target.style.transform = "none";
+    moveTarget(liteBtn);
 }
 
 // Function to set opacity to 1 for the Standard option and change background color of body to red
@@ -40,16 +31,7 @@ function setStandardOpacity() {
 
     // Move the target behind Standard
     const standardBtn = document.querySelector(".mynav button:nth-child(2)");
-    const width = standardBtn.getBoundingClientRect().width;
-    const height = standardBtn.getBoundingClientRect().height;
-    const left = standardBtn.getBoundingClientRect().left + window.scrollX;
-    const top = standardBtn.getBoundingClientRect().top + window.scrollY;
-    const target = document.querySelector(".target");
-    target.style.width = `${width}px`;
-    target.style.height = `${height}px`;
-    target.style.left = `${left}px`;
-    target.style.top = `${top}px`;
-    target.style.transform = "none";
+    moveTarget(standardBtn);
 }
 
 // Function to set opacity to 1 for the Premium option and change background color of body to blue
@@ -67,10 +49,15 @@ function setPremiumOpacity() {
 
     // Move the target behind Premium
     const premiumBtn = document.querySelector(".mynav button:nth-child(3)");
-    const width = premiumBtn.getBoundingClientRect().width;
-    const height = premiumBtn.getBoundingClientRect().height;
-    const left = premiumBtn.getBoundingClientRect().left + window.scrollX;
-    const top = premiumBtn.getBoundingClientRect().top + window.scrollY;
+    moveTarget(premiumBtn);
+}
+
+// Move the target behind the specified button
+function moveTarget(button) {
+    const width = button.getBoundingClientRect().width;
+    const height = button.getBoundingClientRect().height;
+    const left = button.getBoundingClientRect().left + window.scrollX;
+    const top = button.getBoundingClientRect().top + window.scrollY;
     const target = document.querySelector(".target");
     target.style.width = `${width}px`;
     target.style.height = `${height}px`;
